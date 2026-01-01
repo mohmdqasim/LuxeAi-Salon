@@ -5,6 +5,7 @@ import { Hero } from './components/Hero';
 import { ProblemSection } from './components/ProblemSection';
 import { SolutionTimeline } from './components/SolutionTimeline';
 import { FeaturesGrid } from './components/FeaturesGrid';
+import { VsSection } from './components/VsSection';
 import { HowItWorks } from './components/HowItWorks';
 import { Integrations } from './components/Integrations';
 import { DashboardPreview } from './components/DashboardPreview';
@@ -33,6 +34,7 @@ const App: React.FC = () => {
         <ProblemSection />
         <SolutionTimeline />
         <FeaturesGrid />
+        <VsSection />
         <HowItWorks />
         <Integrations />
         <DashboardPreview />
