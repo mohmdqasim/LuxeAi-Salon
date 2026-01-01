@@ -43,7 +43,7 @@ export const Pricing: React.FC = () => {
     <section className="py-32 bg-white dark:bg-[#050510] relative overflow-hidden" id="pricing">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <ScrollReveal animation="fade-in-up" className="text-center mb-16">
@@ -52,7 +52,7 @@ export const Pricing: React.FC = () => {
           </div>
           <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">
             Predictable Pricing for <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-purple-600">Unstoppable Growth.</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-500 to-teal-600">Unstoppable Growth.</span>
           </h2>
           
           {/* Toggle */}
@@ -79,7 +79,7 @@ export const Pricing: React.FC = () => {
               delay={idx * 150}
               className={`flex flex-col p-1 rounded-[2.5rem] transition-all duration-500 ${
                 plan.highlight 
-                  ? 'bg-gradient-to-b from-primary via-blue-600 to-purple-600 shadow-2xl shadow-primary/20 scale-105 z-10' 
+                  ? 'bg-gradient-to-b from-primary via-emerald-600 to-teal-600 shadow-2xl shadow-primary/20 scale-105 z-10' 
                   : 'bg-slate-200/50 dark:bg-slate-800/50'
               }`}
             >

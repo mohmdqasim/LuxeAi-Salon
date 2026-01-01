@@ -14,7 +14,7 @@ const features = [
     desc: 'LuxeBot handles complex scheduling logic, service combinations, and processing payments 24/7 without human intervention.',
     className: 'md:col-span-8 md:row-span-1',
     badge: 'Most Powerful',
-    color: 'from-blue-600 to-primary'
+    color: 'from-emerald-600 to-primary'
   },
   { 
     icon: MessageCircle, 
@@ -25,7 +25,7 @@ const features = [
       <div className="flex gap-2 mt-4">
         <div className="p-2 rounded-lg bg-pink-500/10 text-pink-500"><Instagram className="w-4 h-4" /></div>
         <div className="p-2 rounded-lg bg-emerald-500/10 text-emerald-500"><MessageSquare className="w-4 h-4" /></div>
-        <div className="p-2 rounded-lg bg-blue-500/10 text-blue-500"><Phone className="w-4 h-4" /></div>
+        <div className="p-2 rounded-lg bg-emerald-500/10 text-emerald-500"><Phone className="w-4 h-4" /></div>
       </div>
     )
   },
@@ -40,7 +40,7 @@ const features = [
     title: 'Predictive Analytics', 
     desc: 'Forecast your busiest weeks and identify high-value clients before they churn.',
     className: 'md:col-span-4 md:row-span-1',
-    color: 'from-purple-600 to-pink-600'
+    color: 'from-emerald-600 to-teal-600'
   },
   { 
     icon: Users, 
@@ -63,7 +63,7 @@ export const FeaturesGrid: React.FC = () => {
       {/* Subtle Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none">
         <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-[120px]"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -74,7 +74,7 @@ export const FeaturesGrid: React.FC = () => {
           </div>
           <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">
             Everything you need <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-purple-600">to scale your empire.</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-500 to-teal-600">to scale your empire.</span>
           </h2>
           <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto text-lg font-medium">
             We've combined ten different tools into one seamless, AI-first platform designed specifically for the beauty industry.
@@ -126,7 +126,7 @@ export const FeaturesGrid: React.FC = () => {
         </div>
 
         <ScrollReveal animation="fade-in-up" delay={600} className="mt-20 flex flex-col items-center">
-          <div className="p-8 rounded-[3rem] bg-gradient-to-r from-slate-900 to-slate-800 dark:from-primary/20 dark:to-purple-900/20 border border-white/10 w-full max-w-4xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
+          <div className="p-8 rounded-[3rem] bg-gradient-to-r from-slate-900 to-slate-800 dark:from-primary/20 dark:to-emerald-900/20 border border-white/10 w-full max-w-4xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
             <div className="text-center md:text-left">
               <h4 className="text-xl font-bold text-white mb-2">Want to see the full list of 40+ features?</h4>
               <p className="text-slate-400 text-sm">Download our detailed product comparison guide.</p>

@@ -8,7 +8,7 @@ const steps = [
     icon: MessageSquare,
     title: 'Instant Inquiry',
     desc: 'Client sends a DM on Instagram or WhatsApp. No more waiting for "business hours".',
-    color: 'from-blue-500 to-primary',
+    color: 'from-emerald-500 to-primary',
     tag: 'Phase 01',
     snippet: (
       <div className="mt-4 p-3 bg-white/10 backdrop-blur-md rounded-xl border border-white/10 shadow-inner">
@@ -23,7 +23,7 @@ const steps = [
     icon: Bot,
     title: 'AI Processing',
     desc: 'LuxeBot instantly cross-checks your staff schedules, prices, and available durations.',
-    color: 'from-indigo-500 to-purple-600',
+    color: 'from-primary to-emerald-600',
     tag: 'Phase 02',
     snippet: (
       <div className="mt-4 p-3 bg-white/10 backdrop-blur-md rounded-xl border border-white/10 flex items-center gap-3">
@@ -41,7 +41,7 @@ const steps = [
     icon: CheckCircle,
     title: 'Smart Booking',
     desc: 'Suggests the best times, collects the deposit, and confirms the spot in seconds.',
-    color: 'from-primary to-blue-700',
+    color: 'from-emerald-600 to-teal-700',
     tag: 'Phase 03',
     snippet: (
       <div className="mt-4 p-3 bg-emerald-500/20 backdrop-blur-md rounded-xl border border-emerald-500/30 flex items-center justify-between">
@@ -54,7 +54,7 @@ const steps = [
     icon: CalendarDays,
     title: 'Zero-Effort Sync',
     desc: 'Appointment is locked into your calendar. Staff receive instant push notifications.',
-    color: 'from-emerald-500 to-teal-600',
+    color: 'from-emerald-400 to-teal-500',
     tag: 'Phase 04',
     snippet: (
       <div className="mt-4 flex gap-1 h-8">
@@ -68,7 +68,7 @@ const steps = [
     icon: Bell,
     title: 'Retention Loop',
     desc: 'Automated 24h reminders and post-service review requests keep clients coming back.',
-    color: 'from-purple-500 to-pink-600',
+    color: 'from-teal-500 to-emerald-600',
     tag: 'Phase 05',
     snippet: (
       <div className="mt-4 p-2 bg-white rounded-lg flex items-center gap-2 shadow-lg">
@@ -92,7 +92,7 @@ export const SolutionTimeline: React.FC = () => {
           </div>
           <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6 leading-tight">
             One AI Assistant for <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">Every Interaction.</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-600">Every Interaction.</span>
           </h2>
           <p className="text-lg text-slate-500 dark:text-slate-400 font-medium">
             Watch how LuxeSalon AI handles the heavy lifting, from the first spark of interest to the final confirmation.

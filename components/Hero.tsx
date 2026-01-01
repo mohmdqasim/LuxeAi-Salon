@@ -9,8 +9,8 @@ export const Hero: React.FC = () => {
       {/* Dynamic Background Elements */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none overflow-hidden">
         <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-primary/10 dark:bg-primary/20 rounded-full blur-[120px] animate-blob"></div>
-        <div className="absolute bottom-[10%] left-[-10%] w-[500px] h-[500px] bg-purple-500/10 dark:bg-purple-500/20 rounded-full blur-[120px] animate-blob animation-delay-2000"></div>
-        <div className="absolute top-[20%] left-[20%] w-[300px] h-[300px] bg-blue-400/10 dark:bg-blue-400/10 rounded-full blur-[100px] animate-blob animation-delay-4000"></div>
+        <div className="absolute bottom-[10%] left-[-10%] w-[500px] h-[500px] bg-emerald-500/10 dark:bg-emerald-500/20 rounded-full blur-[120px] animate-blob animation-delay-2000"></div>
+        <div className="absolute top-[20%] left-[20%] w-[300px] h-[300px] bg-teal-400/10 dark:bg-teal-400/10 rounded-full blur-[100px] animate-blob animation-delay-4000"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -31,7 +31,7 @@ export const Hero: React.FC = () => {
           <ScrollReveal animation="fade-in-up" delay={200} className="max-w-4xl">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.95] mb-8 tracking-tighter text-slate-900 dark:text-white">
               The Operating System for <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-purple-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-500 to-teal-600">
                 Modern Beauty Empires.
               </span>
             </h1>
@@ -87,17 +87,17 @@ export const Hero: React.FC = () => {
                       <span className="text-xs font-black text-white/70 uppercase tracking-widest">AI Efficiency</span>
                     </div>
                     <div className="text-3xl font-black text-white mb-1">98.4%</div>
-                    <div className="text-[10px] text-blue-400 font-bold uppercase tracking-widest">Inquiries Resolved</div>
+                    <div className="text-[10px] text-emerald-400 font-bold uppercase tracking-widest">Inquiries Resolved</div>
                   </div>
 
                   {/* Metric Card 3 */}
                   <div className="bg-white/10 backdrop-blur-xl border border-white/20 p-6 rounded-3xl animate-float animation-delay-4000 hidden md:block">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="p-2 bg-purple-500 rounded-xl"><Shield className="w-5 h-5 text-white" /></div>
+                      <div className="p-2 bg-emerald-600 rounded-xl"><Shield className="w-5 h-5 text-white" /></div>
                       <span className="text-xs font-black text-white/70 uppercase tracking-widest">No-Shows</span>
                     </div>
                     <div className="text-3xl font-black text-white mb-1">-85%</div>
-                    <div className="text-[10px] text-purple-400 font-bold uppercase tracking-widest">With Auto-Deposits</div>
+                    <div className="text-[10px] text-emerald-400 font-bold uppercase tracking-widest">With Auto-Deposits</div>
                   </div>
                 </div>
               </div>
@@ -112,8 +112,8 @@ export const Hero: React.FC = () => {
           </ScrollReveal>
 
           {/* Floating Accents */}
-          <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-primary to-purple-600 rounded-full blur-[80px] opacity-30 animate-pulse"></div>
-          <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-gradient-to-br from-blue-400 to-emerald-400 rounded-full blur-[80px] opacity-30 animate-pulse animation-delay-2000"></div>
+          <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-primary to-emerald-600 rounded-full blur-[80px] opacity-30 animate-pulse"></div>
+          <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-gradient-to-br from-emerald-400 to-teal-400 rounded-full blur-[80px] opacity-30 animate-pulse animation-delay-2000"></div>
         </div>
 
         {/* Trusted By Section */}
