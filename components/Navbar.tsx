@@ -15,7 +15,7 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
           <div className="p-1.5 bg-primary rounded-lg group-hover:rotate-12 transition-transform">
             <Sparkles className="text-white w-6 h-6" />
           </div>
-          <span className="text-xl font-bold tracking-tight">LuxeSalon AI</span>
+          <span className="text-xl font-bold tracking-tight">GlamMate AI</span>
         </div>
 
         <nav className="hidden md:flex items-center gap-8">

@@ -16,7 +16,7 @@ interface Message {
 export const ChatDemo: React.FC = () => {
   const [activeChannel, setActiveChannel] = useState<Channel>('instagram');
   const [messages, setMessages] = useState<Message[]>([
-    { id: '1', sender: 'bot', text: 'Hi! I’m LuxeBot. I can help you book an appointment or answer any questions about our services. What can I do for you today?', timestamp: new Date() }
+    { id: '1', sender: 'bot', text: 'Hi! I’m GlamBot. I can help you book an appointment or answer any questions about our services. What can I do for you today?', timestamp: new Date() }
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -48,7 +48,7 @@ export const ChatDemo: React.FC = () => {
         model: 'gemini-3-flash-preview',
         contents: inputValue,
         config: {
-          systemInstruction: "You are LuxeBot, a high-end, professional, and friendly AI salon assistant for 'Glow Bar NYC'. Your goal is to help clients book beauty services (Hair, Nails, Facials) and answer questions about pricing. Be concise and use a tone that matches a premium beauty salon. Mention that Saturday slots are filling fast if appropriate.",
+          systemInstruction: "You are GlamBot, a high-end, professional, and friendly AI salon assistant for 'Glow Bar NYC'. Your goal is to help clients book beauty services (Hair, Nails, Facials) and answer questions about pricing. Be concise and use a tone that matches a premium beauty salon. Mention that Saturday slots are filling fast if appropriate.",
           maxOutputTokens: 100,
         },
       });
@@ -84,7 +84,7 @@ export const ChatDemo: React.FC = () => {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-600">Every Channel You Use.</span>
               </h2>
               <p className="text-lg text-slate-500 dark:text-slate-400 font-medium">
-                Whether they find you on Instagram, message you on WhatsApp, or text your business line, LuxeBot provides a consistent, high-end experience that closes more bookings.
+                Whether they find you on Instagram, message you on WhatsApp, or text your business line, GlamBot provides a consistent, high-end experience that closes more bookings.
               </p>
             </ScrollReveal>
 
@@ -98,7 +98,7 @@ export const ChatDemo: React.FC = () => {
                   key={channel.id}
                   onClick={() => {
                     setActiveChannel(channel.id);
-                    setMessages([{ id: 'init', sender: 'bot', text: `Hi! I’m LuxeBot on ${channel.label}. How can I help?`, timestamp: new Date() }]);
+                    setMessages([{ id: 'init', sender: 'bot', text: `Hi! I’m GlamBot on ${channel.label}. How can I help?`, timestamp: new Date() }]);
                   }}
                   className={`p-6 rounded-[2rem] border-2 transition-all flex flex-col items-center gap-3 group ${
                     activeChannel === channel.id 
@@ -130,9 +130,9 @@ export const ChatDemo: React.FC = () => {
                   {activeChannel === 'whatsapp' && <MessageSquare className="w-5 h-5" />}
                   <div className="flex-1">
                     <p className="text-sm font-black tracking-tight">Glow Bar NYC</p>
-                    <p className="text-[10px] opacity-70">LuxeBot AI Assistant</p>
+                    <p className="text-[10px] opacity-70">GlamBot AI Assistant</p>
                   </div>
-                  <MoreHorizontal className="w-5 h-5 opacity-50" />
+                  < MoreHorizontal className="w-5 h-5 opacity-50" />
                 </div>
 
                 {/* Chat Area */}
@@ -194,7 +194,7 @@ export const ChatDemo: React.FC = () => {
                       <Send className="w-4 h-4" />
                     </button>
                   </div>
-                  <p className="text-[9px] text-center mt-3 text-slate-400 font-bold uppercase tracking-widest">Powered by LuxeSalon AI</p>
+                  <p className="text-[9px] text-center mt-3 text-slate-400 font-bold uppercase tracking-widest">Powered by GlamMate AI</p>
                 </div>
               </div>
 

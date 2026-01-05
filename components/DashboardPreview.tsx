@@ -125,7 +125,7 @@ export const DashboardPreview: React.FC = () => {
                 <div className="space-y-6">
                   <div className="p-6 bg-primary dark:bg-blue-600 rounded-2xl text-white shadow-xl shadow-primary/20">
                     <h4 className="font-bold mb-1">System Health</h4>
-                    <p className="text-white/70 text-xs mb-4">LuxeBot AI is performing at optimal efficiency.</p>
+                    <p className="text-white/70 text-xs mb-4">GlamBot AI is performing at optimal efficiency.</p>
                     <div className="flex items-center justify-center py-4">
                       <div className="relative">
                         <svg className="w-24 h-24 transform -rotate-90">

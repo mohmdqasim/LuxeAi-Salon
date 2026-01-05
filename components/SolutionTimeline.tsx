@@ -22,7 +22,7 @@ const steps = [
   {
     icon: Bot,
     title: 'AI Processing',
-    desc: 'LuxeBot instantly cross-checks your staff schedules, prices, and available durations.',
+    desc: 'GlamBot instantly cross-checks your staff schedules, prices, and available durations.',
     color: 'from-primary to-emerald-600',
     tag: 'Phase 02',
     snippet: (
@@ -95,7 +95,7 @@ export const SolutionTimeline: React.FC = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-600">Every Interaction.</span>
           </h2>
           <p className="text-lg text-slate-500 dark:text-slate-400 font-medium">
-            Watch how LuxeSalon AI handles the heavy lifting, from the first spark of interest to the final confirmation.
+            Watch how GlamMate AI handles the heavy lifting, from the first spark of interest to the final confirmation.
           </p>
         </ScrollReveal>
 

@@ -11,7 +11,7 @@ const features = [
   { 
     icon: Bot, 
     title: 'AI Booking Concierge', 
-    desc: 'LuxeBot handles complex scheduling logic, service combinations, and processing payments 24/7 without human intervention.',
+    desc: 'GlamBot handles complex scheduling logic, service combinations, and processing payments 24/7 without human intervention.',
     className: 'md:col-span-8 md:row-span-1',
     badge: 'Most Powerful',
     color: 'from-emerald-600 to-primary'

@@ -85,7 +85,7 @@ export const VsSection: React.FC = () => {
             </div>
           </ScrollReveal>
 
-          {/* Right Side: LuxeSalon AI */}
+          {/* Right Side: GlamMate AI */}
           <ScrollReveal animation="slide-in-right" className="flex flex-col">
             <div className="flex-1 p-8 md:p-12 rounded-[3rem] bg-gradient-to-br from-white to-emerald-50 dark:from-slate-900 dark:to-emerald-950/20 border-2 border-primary/20 shadow-2xl shadow-primary/5 relative overflow-hidden group">
               {/* Background Glow */}
@@ -98,8 +98,8 @@ export const VsSection: React.FC = () => {
                       <Sparkles className="w-6 h-6" />
                     </div>
                     <div>
-                      <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary">The Luxe Way</span>
-                      <h3 className="text-2xl font-black">LuxeSalon AI</h3>
+                      <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary">The Glam Way</span>
+                      <h3 className="text-2xl font-black">GlamMate AI</h3>
                     </div>
                   </div>
                   <div className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 text-[10px] font-black uppercase tracking-widest animate-pulse-soft">
@@ -165,7 +165,7 @@ export const VsSection: React.FC = () => {
                     <div className="h-full bg-primary/20 w-1/4"></div>
                   </div>
                   <div className="flex justify-between items-center text-[10px] font-black text-primary uppercase pt-1">
-                    <span>LuxeWay</span>
+                    <span>GlamWay</span>
                     <span>{c.new}</span>
                   </div>
                   <div className="h-1.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
