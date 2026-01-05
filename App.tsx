@@ -7,7 +7,7 @@ import { SolutionTimeline } from './components/SolutionTimeline';
 import { FeaturesGrid } from './components/FeaturesGrid';
 import { VsSection } from './components/VsSection';
 import { HowItWorks } from './components/HowItWorks';
-import { Integrations } from './components/Integrations';
+import { ChatDemo } from './components/ChatDemo';
 import { DashboardPreview } from './components/DashboardPreview';
 import { UseCases } from './components/UseCases';
 import { Pricing } from './components/Pricing';
@@ -36,7 +36,7 @@ const App: React.FC = () => {
         <FeaturesGrid />
         <VsSection />
         <HowItWorks />
-        <Integrations />
+        <ChatDemo />
         <DashboardPreview />
         <UseCases />
         <Pricing />
