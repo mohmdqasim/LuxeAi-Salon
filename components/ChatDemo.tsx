@@ -43,13 +43,13 @@ export const ChatDemo: React.FC = () => {
     setIsTyping(true);
 
     try {
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+      // Create a new GoogleGenAI instance following SDK guidelines
+      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
       const response = await ai.models.generateContent({
         model: 'gemini-3-flash-preview',
         contents: inputValue,
         config: {
           systemInstruction: "You are GlamBot, a high-end, professional, and friendly AI salon assistant for 'Glow Bar NYC'. Your goal is to help clients book beauty services (Hair, Nails, Facials) and answer questions about pricing. Be concise and use a tone that matches a premium beauty salon. Mention that Saturday slots are filling fast if appropriate.",
-          maxOutputTokens: 100,
         },
       });
 
