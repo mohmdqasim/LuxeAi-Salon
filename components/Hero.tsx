@@ -6,11 +6,19 @@ import { ScrollReveal } from './ScrollReveal';
 export const Hero: React.FC = () => {
   return (
     <section className="relative pt-20 pb-24 lg:pt-32 lg:pb-40 overflow-hidden bg-background-light dark:bg-background-dark">
-      {/* Dynamic Background Elements */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none overflow-hidden">
-        <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-accent/10 dark:bg-accent/20 rounded-full blur-[120px] animate-blob"></div>
-        <div className="absolute bottom-[10%] left-[-10%] w-[500px] h-[500px] bg-primary/10 dark:bg-primary/20 rounded-full blur-[120px] animate-blob animation-delay-2000"></div>
-        <div className="absolute top-[20%] left-[20%] w-[300px] h-[300px] bg-secondary/10 dark:bg-secondary/10 rounded-full blur-[100px] animate-blob animation-delay-4000"></div>
+      {/* Decorative Background Elements - Matching Screenshot */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
+        {/* Large Left Circle */}
+        <div className="absolute top-1/2 -left-[200px] md:-left-[350px] -translate-y-1/2 w-[500px] h-[500px] md:w-[800px] md:h-[800px] bg-slate-200/50 dark:bg-slate-800/10 rounded-full animate-blob"></div>
+        
+        {/* Overlapping Bottom-Left Circle */}
+        <div className="absolute bottom-[10%] left-[2%] w-48 h-48 md:w-80 md:h-80 bg-secondary/15 dark:bg-secondary/10 rounded-full animate-blob animation-delay-2000"></div>
+        
+        {/* Top-Right Circle */}
+        <div className="absolute top-[10%] right-[5%] w-40 h-40 md:w-72 md:h-72 bg-secondary/15 dark:bg-secondary/10 rounded-full animate-blob animation-delay-4000"></div>
+        
+        {/* Bottom-Right Circle (As indicated by user drawing) */}
+        <div className="absolute bottom-[15%] right-[10%] w-56 h-56 md:w-96 md:h-96 bg-secondary/10 dark:bg-secondary/5 rounded-full animate-blob animation-delay-6000"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -26,7 +34,7 @@ export const Hero: React.FC = () => {
 
           <ScrollReveal animation="fade-in-up" delay={400} className="max-w-2xl">
             <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-12 leading-relaxed font-medium">
-              Scale your salon with an AI assistant that masters your schedule, handles multi-channel bookings, and recovers lost revenue—while you focus on what you do best.
+              Scale your salon with an AI assistant that masters your schedule, handles multi-channel bookings, and recovers lost revenue while you focus on what you do best.
             </p>
           </ScrollReveal>
 
@@ -87,7 +95,7 @@ export const Hero: React.FC = () => {
                       <span className="text-xs font-black text-white/70 uppercase tracking-widest">No-Shows</span>
                     </div>
                     <div className="text-3xl font-black text-white mb-1">-85%</div>
-                    <div className="text-[10px] text-accent font-bold uppercase tracking-widest">With Auto-Deposits</div>
+                    <div className="text-[10px] text-accent font-bold uppercase tracking-widest">With Smart Reminders</div>
                   </div>
                 </div>
               </div>
@@ -100,10 +108,6 @@ export const Hero: React.FC = () => {
               </div>
             </div>
           </ScrollReveal>
-
-          {/* Floating Accents */}
-          <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-primary to-accent rounded-full blur-[80px] opacity-30 animate-pulse"></div>
-          <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-gradient-to-br from-accent to-secondary rounded-full blur-[80px] opacity-30 animate-pulse animation-delay-2000"></div>
         </div>
       </div>
     </section>

@@ -7,7 +7,7 @@ const problems = [
   {
     icon: PhoneOff,
     title: 'The Silent Revenue Killer',
-    subtitle: 'Missed Calls',
+    subtitle: '',
     desc: '62% of calls to salons go unanswered. In a high-intent industry, a missed call is an immediate booking for your competitor across the street.',
     color: 'text-primary dark:text-accent',
     bg: 'bg-primary/5 dark:bg-accent/10',
@@ -45,14 +45,14 @@ const problems = [
 export const ProblemSection: React.FC = () => {
   return (
     <section className="py-32 bg-white dark:bg-[#08081a] relative overflow-hidden">
-      {/* Background Decorative Elements */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20 dark:opacity-40">
-        <div className="absolute top-1/4 -left-20 w-96 h-96 bg-accent/20 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-primary/20 rounded-full blur-[120px]"></div>
+      {/* Background Decorative Elements - Matching Screenshot Style */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
+        <div className="absolute top-0 -left-[200px] w-[500px] h-[500px] bg-slate-200/30 dark:bg-slate-800/10 rounded-full"></div>
+        <div className="absolute bottom-[20%] right-[-100px] w-80 h-80 bg-secondary/10 dark:bg-secondary/5 rounded-full"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-20">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12 mb-20">
           <ScrollReveal animation="fade-in-up" className="max-w-2xl">
             <span className="inline-block px-4 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800/50 text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-[0.2em] mb-6">
               The Reality Check
@@ -64,6 +64,12 @@ export const ProblemSection: React.FC = () => {
               </span>
             </h2>
           </ScrollReveal>
+
+          <ScrollReveal animation="fade-in-up" delay={200} className="max-w-md lg:text-right">
+            <p className="text-lg text-slate-500 dark:text-slate-400 font-medium leading-relaxed italic">
+              Running a salon shouldn't mean being chained to a desk. Most owners lose 30% of their potential revenue to administrative inefficiencies.
+            </p>
+          </ScrollReveal>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -72,7 +78,7 @@ export const ProblemSection: React.FC = () => {
               key={idx}
               animation="zoom-in"
               delay={idx * 150}
-              className={`${item.gridClass} group relative p-8 md:p-10 rounded-[2.5rem] bg-background-light dark:bg-slate-900/50 border border-slate-200/60 dark:border-slate-800/60 hover:border-accent/50 dark:hover:border-accent/50 transition-all duration-500 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] overflow-hidden`}
+              className={`${item.gridClass} group relative p-8 md:p-10 rounded-[2.5rem] bg-background-light dark:bg-slate-900/50 border border-slate-200/60 dark:border-slate-800/60 hover:border-accent/50 dark:hover:border-accent/50 transition-all duration-500 hover:shadow-[0_30px_60_px_-15px_rgba(0,0,0,0.1)] overflow-hidden`}
             >
               {/* Card Glow Effect */}
               <div className="absolute -top-24 -right-24 w-48 h-48 bg-accent/5 rounded-full blur-3xl group-hover:bg-accent/10 transition-colors duration-500"></div>
@@ -83,9 +89,11 @@ export const ProblemSection: React.FC = () => {
                 </div>
                 
                 <div className="mb-4">
-                  <span className={`text-xs font-black uppercase tracking-widest ${item.color} mb-2 block`}>
-                    {item.subtitle}
-                  </span>
+                  {item.subtitle && (
+                    <span className={`text-xs font-black uppercase tracking-widest ${item.color} mb-2 block`}>
+                      {item.subtitle}
+                    </span>
+                  )}
                   <h3 className="text-2xl font-black tracking-tight mb-4 group-hover:text-accent transition-colors text-primary dark:text-white">
                     {item.title}
                   </h3>
@@ -103,17 +111,6 @@ export const ProblemSection: React.FC = () => {
             </ScrollReveal>
           ))}
         </div>
-
-        <ScrollReveal animation="fade-in-up" delay={800} className="mt-20 text-center">
-          <div className="inline-flex items-center gap-4 p-2 pl-6 pr-2 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl">
-            <p className="text-sm font-bold text-slate-600 dark:text-slate-300">
-              Ready to stop the leakage?
-            </p>
-            <button className="bg-primary text-white text-xs font-black uppercase tracking-wider px-6 py-3 rounded-xl hover:bg-slate-800 transition-all">
-              See the Fix
-            </button>
-          </div>
-        </ScrollReveal>
       </div>
     </section>
   );
