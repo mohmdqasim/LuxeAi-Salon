@@ -2,7 +2,7 @@
 import React from 'react';
 import { 
   FileText, Database, Table, BookOpen, FileCode,
-  Phone, MessageSquare, Instagram, Mail, MessageCircle,
+  Globe, MessageSquare, Instagram, Mail, MessageCircle,
   Sparkles
 } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
@@ -44,7 +44,7 @@ export const IntelligenceSection: React.FC = () => {
   ];
 
   const rightNodes = [
-    { id: 'voice', icon: Phone, label: 'Business Voice' },
+    { id: 'widget', icon: Globe, label: 'Website Widget' },
     { id: 'ig', icon: Instagram, label: 'Instagram DM' },
     { id: 'wa', icon: MessageCircle, label: 'WhatsApp Biz' },
     { id: 'sms', icon: MessageSquare, label: 'AI SMS Bot' },

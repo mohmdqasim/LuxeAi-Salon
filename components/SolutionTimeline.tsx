@@ -203,14 +203,17 @@ export const SolutionTimeline: React.FC = () => {
                   Every Single Week.
                 </h3>
                 <p className="text-slate-400 font-bold text-lg max-w-md mx-auto md:mx-0">
-                  Join the 1,000+ salon owners who fired their receptionist and hired a GlamMate.
+                  Join over 1,000 salon owners who upgraded to GlamMate and now run smoother, smarter salons without the stress.
                 </p>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-                <button className="px-10 py-6 rounded-2xl bg-accent text-white font-black text-sm uppercase tracking-widest hover:bg-white hover:text-primary transition-all shadow-xl shadow-accent/20 active:scale-95 flex items-center justify-center gap-3">
+                <a 
+                  href="https://app.glammateai.com/"
+                  className="px-10 py-6 rounded-2xl bg-accent text-white font-black text-sm uppercase tracking-widest hover:bg-white hover:text-primary transition-all shadow-xl shadow-accent/20 active:scale-95 flex items-center justify-center gap-3"
+                >
                   Launch My AI Assistant <ArrowRight className="w-5 h-5" />
-                </button>
+                </a>
                 <button className="px-10 py-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 text-white font-black text-sm uppercase tracking-widest hover:bg-white/20 transition-all flex items-center justify-center gap-3">
                   View Demo Session
                 </button>
