@@ -35,8 +35,8 @@ export const Footer: React.FC = () => {
             <div className="mb-6 cursor-pointer">
               <Logo className="scale-75 origin-left" />
             </div>
-            <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-xs">
-              The #1 AI automation platform for modern salons and spas. Simplify your business today.
+            <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-xs font-bold">
+              The Operating System for Modern Beauty Empires.
             </p>
             <div className="flex items-center gap-4 mt-8">
               {[Twitter, Instagram, Linkedin, Facebook].map((Icon, i) => (
@@ -49,7 +49,7 @@ export const Footer: React.FC = () => {
 
           {[
             { title: 'Product', links: ['Features', 'How It Works', 'Integrations', 'Pricing'] },
-            { title: 'Legal', links: ['Privacy Policy', 'Terms of Service'] },
+            { title: 'Legal', links: ['Privacy Policy', 'Terms of Service', 'Cookies Policy'] },
           ].map((col, idx) => (
             <div key={idx}>
               <h4 className="font-bold mb-6 text-primary dark:text-white">{col.title}</h4>
@@ -71,12 +71,12 @@ export const Footer: React.FC = () => {
 
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs text-slate-500 dark:text-slate-500">
-            © 2025 GlamMate AI Inc. All rights reserved.
+            © 2026 GlamMate AI Inc. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-xs text-slate-500">
-            <a href="#" className="flex items-center gap-1.5 hover:text-accent transition-colors">
+            <div className="flex items-center gap-1.5 select-none">
               <Globe className="w-3.5 h-3.5" /> English (US)
-            </a>
+            </div>
           </div>
         </div>
       </div>
