@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Check, Zap, Star, ShieldCheck, ArrowRight } from 'lucide-react';
+import { Check, Zap, Star, ShieldCheck, ArrowRight, X } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
 
 const plans = [
@@ -11,6 +10,7 @@ const plans = [
     desc: 'Perfect for solo stylists and independent creators.',
     cta: 'Start Free Trial',
     features: ['1 Staff Seat', '500 AI Conversations', 'Google & Outlook Sync', 'Basic Analytics', 'Email Support'],
+    notIncluded: ['SMS & WhatsApp Reminders', 'Team Management', 'Custom AI Training', 'Priority Support'],
     icon: Zap,
     highlight: false,
   },
@@ -18,9 +18,10 @@ const plans = [
     name: 'Professional',
     monthlyPrice: 99,
     annualPrice: 79,
-    desc: 'Ideal for busy salons with growing teams.',
+    desc: 'Ideal for busy salons with growing teams and locations.',
     cta: 'Start Free Trial',
     features: ['Up to 5 Staff Seats', 'Unlimited AI Conversations', 'SMS & WhatsApp Reminders', 'Advanced Team Sync', 'Priority Support'],
+    notIncluded: ['Custom AI Training', 'Dedicated Account Manager', 'White-label Options', 'API Access'],
     icon: Star,
     highlight: true,
   },
@@ -31,6 +32,7 @@ const plans = [
     desc: 'Custom solutions for multi-location empires.',
     cta: 'Contact Sales',
     features: ['Unlimited Staff Seats', 'Custom AI Training', 'Dedicated Account Manager', 'API & Webhook Access', 'White-label Options'],
+    notIncluded: [],
     icon: ShieldCheck,
     highlight: false,
   },
@@ -91,26 +93,31 @@ export const Pricing: React.FC = () => {
                     <plan.icon className="w-6 h-6" />
                   </div>
                   <h3 className="text-2xl font-black tracking-tight mb-2 text-primary dark:text-white">{plan.name}</h3>
-                  <p className="text-sm text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
+                  <p className="text-sm text-slate-500 dark:text-slate-400 font-medium leading-relaxed min-h-[40px]">
                     {plan.desc}
                   </p>
                 </div>
 
-                <div className="mb-10">
+                <div className="mb-10 min-h-[80px] flex flex-col justify-end">
                   {plan.monthlyPrice !== null ? (
-                    <div className="flex items-baseline gap-1 text-primary dark:text-white">
-                      <span className="text-5xl font-black tracking-tighter">
-                        ${isAnnual ? plan.annualPrice : plan.monthlyPrice}
-                      </span>
-                      <span className="text-slate-400 font-bold">/mo</span>
-                    </div>
+                    <>
+                      <div className="flex items-baseline gap-1 text-primary dark:text-white">
+                        <span className="text-5xl font-black tracking-tighter">
+                          ${isAnnual ? plan.annualPrice : plan.monthlyPrice}
+                        </span>
+                        <span className="text-slate-400 font-bold">/mo</span>
+                      </div>
+                      <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-2">
+                        Billed {isAnnual ? 'annually' : 'monthly'}
+                      </p>
+                    </>
                   ) : (
-                    <div className="text-4xl font-black tracking-tighter text-primary dark:text-white">Custom</div>
-                  )}
-                  {plan.monthlyPrice !== null && (
-                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-2">
-                      Billed {isAnnual ? 'annually' : 'monthly'}
-                    </p>
+                    <>
+                      <div className="text-5xl font-black tracking-tighter text-primary dark:text-white">Custom</div>
+                      <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-2 opacity-0 select-none">
+                        Enterprise Only
+                      </p>
+                    </>
                   )}
                 </div>
 
@@ -125,7 +132,7 @@ export const Pricing: React.FC = () => {
                 </button>
 
                 <div className="space-y-4 mt-auto">
-                  <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest">Everything in {idx === 0 ? 'Free' : plans[idx-1].name}:</p>
+                  <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest">Included:</p>
                   {plan.features.map((feature, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <div className={`mt-1 p-0.5 rounded-full ${plan.highlight ? 'bg-accent/20 text-accent' : 'bg-primary/10 text-primary dark:text-accent'}`}>
@@ -134,6 +141,23 @@ export const Pricing: React.FC = () => {
                       <span className="text-sm text-slate-600 dark:text-slate-300 font-medium">{feature}</span>
                     </div>
                   ))}
+
+                  {plan.notIncluded.length > 0 ? (
+                    <>
+                      <div className="h-px w-full bg-slate-100 dark:bg-slate-800 my-4"></div>
+                      <p className="text-[10px] font-black text-slate-300 dark:text-slate-600 uppercase tracking-widest">Not Included:</p>
+                      {plan.notIncluded.map((feature, i) => (
+                        <div key={i} className="flex items-start gap-3 opacity-40">
+                          <div className="mt-1 p-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-400">
+                            <X className="w-3.5 h-3.5" />
+                          </div>
+                          <span className="text-sm text-slate-400 dark:text-slate-500 font-medium line-through decoration-slate-300 dark:decoration-slate-700">{feature}</span>
+                        </div>
+                      ))}
+                    </>
+                  ) : (
+                    <div className="py-6"></div>
+                  )}
                 </div>
               </div>
             </ScrollReveal>
