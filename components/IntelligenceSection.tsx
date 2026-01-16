@@ -21,12 +21,12 @@ const IntelligenceNode: React.FC<NodeProps> = ({ icon: Icon, label, side }) => {
     >
       <div className={`
         relative w-11 h-11 rounded-full flex items-center justify-center border transition-all duration-500 z-20
-        bg-[#12122b] border-slate-800 text-slate-400 group-hover:border-accent group-hover:text-white group-hover:shadow-[0_0_15px_rgba(188,156,107,0.3)]
+        bg-[#12122b] border-accent text-white shadow-[0_0_15px_rgba(188,156,107,0.3)]
       `}>
         <Icon className="w-4 h-4 transition-colors duration-300" />
       </div>
       <div className={`${side === 'right' ? 'text-right' : 'text-left'}`}>
-        <p className="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-white transition-colors duration-300 whitespace-nowrap">
+        <p className="text-[9px] font-black uppercase tracking-[0.2em] text-white transition-colors duration-300 whitespace-nowrap">
           {label}
         </p>
       </div>
