@@ -6,36 +6,36 @@ import { ScrollReveal } from './ScrollReveal';
 const problems = [
   {
     icon: PhoneOff,
-    title: 'Inconsistent Availability – You Can\'t Respond 24/7',
-    subtitle: 'Availability',
-    desc: 'Clients reach out on WhatsApp, Instagram, and your website at all hours. Without instant replies, they often book elsewhere.',
+    title: 'The Silent Revenue Killer',
+    subtitle: 'Missed Calls',
+    desc: '62% of calls to salons go unanswered. In a high-intent industry, a missed call is an immediate booking for your competitor across the street.',
     color: 'text-primary dark:text-accent',
     bg: 'bg-primary/5 dark:bg-accent/10',
     gridClass: 'md:col-span-2 md:row-span-1',
   },
   {
+    icon: CalendarRange,
+    title: 'Administrative Burnout',
+    subtitle: 'Manual Bookings',
+    desc: 'Hours wasted on "phone tag" and DM back-and-forths. Your talent belongs on the chair, not the desk.',
+    color: 'text-accent',
+    bg: 'bg-accent/10',
+    gridClass: 'md:col-span-1 md:row-span-1',
+  },
+  {
     icon: XCircle,
-    title: 'No-Shows and Cancellations – Empty Chair Syndrome',
-    subtitle: 'No-Shows',
-    desc: 'When clients forget appointments, your time and income disappear. Without automated reminders, chairs stay empty.',
+    title: 'Empty Chair Syndrome',
+    subtitle: 'No-Shows & Cancellations',
+    desc: 'Last-minute cancellations kill profitability. Without automated deposits, you bear the full cost of an empty slot.',
     color: 'text-secondary',
     bg: 'bg-secondary/10',
     gridClass: 'md:col-span-1 md:row-span-1',
   },
   {
     icon: LayoutGrid,
-    title: 'Too Many Tools, Too Much Work – Admin Overload',
-    subtitle: 'Admin Overload',
-    desc: 'Switching between apps for booking, reminders, and chats slows you down and increases mistakes.',
-    color: 'text-accent',
-    bg: 'bg-accent/10',
-    gridClass: 'md:col-span-1 md:row-span-1',
-  },
-  {
-    icon: CalendarRange,
-    title: 'You\'re Paying for Too Many Tools',
-    subtitle: 'Tool Overload',
-    desc: 'One app for bookings, another for marketing, a different one for payments. You\'re overpaying and your tools aren\'t talking to each other.',
+    title: 'The "Franken-stack" Chaos',
+    subtitle: 'Fragmented Tools',
+    desc: 'Using four different apps for bookings, marketing, and payments leads to data silos and client frustration.',
     color: 'text-primary dark:text-slate-300',
     bg: 'bg-primary/5 dark:bg-white/5',
     gridClass: 'md:col-span-2 md:row-span-1',
@@ -52,17 +52,24 @@ export const ProblemSection: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <ScrollReveal animation="fade-in-up" className="mb-20">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800/50 text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-[0.2em] mb-6">
-            The Reality Check
-          </span>
-          <h2 className="text-4xl md:text-6xl font-black tracking-tight leading-tight text-primary dark:text-white mb-8">
-            The High Cost of <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-              Traditional Management
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-20">
+          <ScrollReveal animation="fade-in-up" className="max-w-2xl">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800/50 text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-[0.2em] mb-6">
+              The Reality Check
             </span>
-          </h2>
-        </ScrollReveal>
+            <h2 className="text-4xl md:text-6xl font-black tracking-tight leading-tight text-primary dark:text-white">
+              The High Cost of <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+                Traditional Management
+              </span>
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal animation="fade-in-up" delay={200} className="lg:max-w-xs">
+            <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
+              Running a salon shouldn't mean being chained to a desk. Most owners lose 30% of their potential revenue to administrative inefficiencies.
+            </p>
+          </ScrollReveal>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {problems.map((item, idx) => (
@@ -92,10 +99,6 @@ export const ProblemSection: React.FC = () => {
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-medium mb-8">
                   {item.desc}
                 </p>
-
-                <div className="mt-auto pt-4 flex items-center gap-2 text-sm font-bold text-slate-400 dark:text-slate-500 group-hover:text-accent transition-colors cursor-pointer">
-                  Learn more about the cost <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </div>
               </div>
 
               {/* Decorative Number */}
@@ -106,6 +109,16 @@ export const ProblemSection: React.FC = () => {
           ))}
         </div>
 
+        <ScrollReveal animation="fade-in-up" delay={800} className="mt-20 text-center">
+          <div className="inline-flex items-center gap-4 p-2 pl-6 pr-2 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl">
+            <p className="text-sm font-bold text-slate-600 dark:text-slate-300">
+              Ready to stop the leakage?
+            </p>
+            <button className="bg-primary text-white text-xs font-black uppercase tracking-wider px-6 py-3 rounded-xl hover:bg-slate-800 transition-all">
+              See the Fix
+            </button>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

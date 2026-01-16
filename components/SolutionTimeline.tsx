@@ -125,16 +125,20 @@ export const SolutionTimeline: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <ScrollReveal animation="fade-in-up" className="text-center mb-32 max-w-5xl mx-auto">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full select-none pointer-events-none opacity-[0.02] dark:opacity-[0.04] -z-10">
+             <span className="text-9xl md:text-[16rem] font-black tracking-tighter whitespace-nowrap uppercase">INTELLIGENCE</span>
+          </div>
+          
           <h2 className="text-5xl md:text-8xl font-black tracking-tighter mb-8 text-primary dark:text-white leading-[0.85]">
             One AI Assistant for <br />
             <div className="relative inline-block mt-4">
               <div className="absolute inset-0 bg-accent -rotate-1 transform translate-y-3 scale-110 -z-10 rounded-xl"></div>
-              <span className="relative text-white px-12 py-4 block">Every Interaction</span>
+              <span className="relative text-white px-12 py-4 block">Every Interaction.</span>
             </div>
           </h2>
           
           <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 font-medium max-w-2xl mx-auto mt-14 leading-relaxed">
-            Experience how GlamMate AI manages your entire front desk, from the initial inquiry to the final follow-up.
+            Experience how GlamMate AI manages your entire front desk, from the initial "Hello" to the final follow-up review.
           </p>
         </ScrollReveal>
 
