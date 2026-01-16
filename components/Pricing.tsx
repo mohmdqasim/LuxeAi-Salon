@@ -6,9 +6,10 @@ const plans = [
   {
     name: 'Starter',
     monthlyPrice: 49,
-    annualPrice: 39,
+    bottomPrice: 39,
     desc: 'Perfect for solo stylists and independent creators.',
     cta: 'Start Free Trial',
+    href: 'https://app.glammateai.com/',
     features: ['1 Staff Seat', '500 AI Conversations', 'Google & Outlook Sync', 'Basic Analytics', 'Email Support'],
     notIncluded: ['SMS & WhatsApp Reminders', 'Team Management', 'Custom AI Training', 'Priority Support'],
     icon: Zap,
@@ -17,9 +18,10 @@ const plans = [
   {
     name: 'Professional',
     monthlyPrice: 99,
-    annualPrice: 79,
+    bottomPrice: 79,
     desc: 'Ideal for busy salons with growing teams and locations.',
     cta: 'Start Free Trial',
+    href: 'https://app.glammateai.com/',
     features: ['Up to 5 Staff Seats', 'Unlimited AI Conversations', 'SMS & WhatsApp Reminders', 'Advanced Team Sync', 'Priority Support'],
     notIncluded: ['Custom AI Training', 'Dedicated Account Manager', 'White-label Options', 'API Access'],
     icon: Star,
@@ -28,9 +30,10 @@ const plans = [
   {
     name: 'Enterprise',
     monthlyPrice: null,
-    annualPrice: null,
+    bottomPrice: null,
     desc: 'Custom solutions for multi-location empires.',
     cta: 'Contact Sales',
+    href: '#contact',
     features: ['Unlimited Staff Seats', 'Custom AI Training', 'Dedicated Account Manager', 'API & Webhook Access', 'White-label Options'],
     notIncluded: [],
     icon: ShieldCheck,
@@ -103,7 +106,7 @@ export const Pricing: React.FC = () => {
                     <>
                       <div className="flex items-baseline gap-1 text-primary dark:text-white">
                         <span className="text-5xl font-black tracking-tighter">
-                          ${isAnnual ? plan.annualPrice : plan.monthlyPrice}
+                          ${isAnnual ? plan.bottomPrice : plan.monthlyPrice}
                         </span>
                         <span className="text-slate-400 font-bold">/mo</span>
                       </div>
@@ -121,7 +124,8 @@ export const Pricing: React.FC = () => {
                   )}
                 </div>
 
-                <button
+                <a
+                  href={plan.href}
                   className={`w-full py-4 rounded-2xl font-black text-xs uppercase tracking-widest transition-all mb-10 flex items-center justify-center gap-2 group ${
                     plan.highlight
                       ? 'bg-primary text-white shadow-xl shadow-primary/20 hover:bg-slate-800'
@@ -129,7 +133,7 @@ export const Pricing: React.FC = () => {
                   }`}
                 >
                   {plan.cta} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
+                </a>
 
                 <div className="space-y-4 mt-auto">
                   <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest">Included:</p>

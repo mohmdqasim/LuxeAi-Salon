@@ -19,9 +19,12 @@ export const Footer: React.FC = () => {
               Join 1,000+ salons reclaiming their time and revenue with GlamMate AI.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="bg-accent text-white text-lg font-bold px-10 py-5 rounded-2xl shadow-2xl shadow-accent/20 hover:bg-accent/90 hover:-translate-y-1 transition-all w-full sm:w-auto">
+              <a 
+                href="https://app.glammateai.com/"
+                className="bg-accent text-white text-lg font-bold px-10 py-5 rounded-2xl shadow-2xl shadow-accent/20 hover:bg-accent/90 hover:-translate-y-1 transition-all w-full sm:w-auto flex items-center justify-center"
+              >
                 Start Free Trial
-              </button>
+              </a>
               <button className="bg-white/10 backdrop-blur-md border border-white/20 text-white text-lg font-bold px-10 py-5 rounded-2xl hover:bg-white/20 transition-all w-full sm:w-auto">
                 Book a Demo
               </button>
