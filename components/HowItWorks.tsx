@@ -4,7 +4,7 @@ import { ScrollReveal } from './ScrollReveal';
 
 const steps = [
   { id: 1, title: 'Sign Up', desc: 'Create your free account. No credit card required for the trial.' },
-  { id: 2, title: 'Train Your AI', desc: 'Upload your service list, prices, and FAQs. It takes 5 minutes.' },
+  { id: 2, title: 'Train your GM-AI', desc: 'Upload your service list, prices, and FAQs. It takes 5 minutes.' },
   { id: 3, title: 'Connect Channels', desc: 'Link your Instagram, WhatsApp, and Website.' },
   { id: 4, title: 'Automate', desc: 'Turn on the AI and watch your calendar fill up automatically.' },
 ];
