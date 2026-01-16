@@ -63,13 +63,12 @@ export const IntelligenceSection: React.FC = () => {
 
       <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <ScrollReveal animation="fade-in-up" className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-white mb-6 uppercase">
+          <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-white mb-6">
             Redefine Customer <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-secondary italic">Experience with GlamMate.</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-secondary italic">Experience With GlamMate.</span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto text-xs md:text-sm font-bold uppercase tracking-widest opacity-60 leading-relaxed">
-            Integrate your service menu, CRMs, historical sales data, and other systems to unlock <br />
-            selling, recommendation, and support capabilities.
+            Unify your service menu, calendar, CRM, and client history into one smart system so your assistant can manage bookings, answer questions, and keep everything in sync automatically.
           </p>
         </ScrollReveal>
 
