@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { XCircle, CheckCircle2, PhoneOff, Zap, Clock, TrendingUp, Sparkles, Minus, Plus, Star } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
@@ -15,7 +14,7 @@ const comparisons = [
   {
     category: "REVENUE PROTECTION",
     oldLabel: "Manual chasing of no-show fees",
-    newLabel: "Upfront Non-Refundable Deposits",
+    newLabel: "Secure Every Booking 24/7 with auto reminders",
     icon: Zap,
     oldValue: 15,
     newValue: 100
@@ -121,9 +120,9 @@ export const VsSection: React.FC = () => {
                   {[
                     "100% Instant Response Rate",
                     "Automated Cloud-Sync Calendars",
-                    "Upfront Non-Refundable Deposits",
+                    "Secure Every Booking 24/7 with auto reminders",
                     "24/7 AI-Led IG & WhatsApp Support",
-                    "One-Click Payouts & Commission Splits"
+                    "Seamless Staff Scheduling and Role Access"
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-5 group/item">
                       <div className="w-6 h-6 rounded-md bg-accent/10 dark:bg-accent/20 flex items-center justify-center text-accent group-hover/item:scale-110 transition-transform">
