@@ -102,18 +102,6 @@ export const Hero: React.FC = () => {
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-primary to-accent rounded-full blur-[80px] opacity-30 animate-pulse"></div>
           <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-gradient-to-br from-accent to-secondary rounded-full blur-[80px] opacity-30 animate-pulse animation-delay-2000"></div>
         </div>
-
-        {/* Trusted By Section */}
-        <ScrollReveal animation="fade-in" delay={1200} className="mt-20 flex flex-col items-center">
-          <p className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-8">Trusted by industry leaders</p>
-          <div className="flex flex-wrap justify-center items-center gap-12 opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
-             <div className="text-2xl font-black tracking-tighter italic text-primary dark:text-white">L'ORÉAL</div>
-             <div className="text-2xl font-black tracking-tighter italic underline decoration-accent text-primary dark:text-white">REVLON</div>
-             <div className="text-2xl font-black tracking-tighter italic text-primary dark:text-white">DYSON</div>
-             <div className="text-2xl font-black tracking-tighter italic text-primary dark:text-white">VOGUE</div>
-             <div className="text-2xl font-black tracking-tighter italic opacity-50 text-primary dark:text-white">SALON PLUS</div>
-          </div>
-        </ScrollReveal>
       </div>
     </section>
   );
