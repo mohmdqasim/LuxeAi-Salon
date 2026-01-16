@@ -32,9 +32,12 @@ export const Hero: React.FC = () => {
 
           <ScrollReveal animation="fade-in-up" delay={600}>
             <div className="flex flex-col sm:flex-row items-center gap-4">
-              <button className="w-full sm:w-auto bg-primary text-white text-sm font-black uppercase tracking-widest px-10 py-5 rounded-2xl shadow-2xl shadow-primary/30 hover:bg-slate-800 transition-all hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-2">
+              <a 
+                href="https://app.glammateai.com/"
+                className="w-full sm:w-auto bg-primary text-white text-sm font-black uppercase tracking-widest px-10 py-5 rounded-2xl shadow-2xl shadow-primary/30 hover:bg-slate-800 transition-all hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-2"
+              >
                 Launch Your AI Salon <Zap className="w-4 h-4 fill-current text-accent" />
-              </button>
+              </a>
               <button className="w-full sm:w-auto bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-sm font-black uppercase tracking-widest px-10 py-5 rounded-2xl flex items-center justify-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all shadow-xl shadow-black/5 text-primary dark:text-white">
                 <PlayCircle className="w-5 h-5 text-accent" /> Watch Product Tour
               </button>

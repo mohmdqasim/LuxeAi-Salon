@@ -70,9 +70,12 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
           >
             Sign In
           </a>
-          <button className="bg-primary text-white text-xs font-black uppercase tracking-widest px-6 py-3 rounded-xl shadow-lg shadow-primary/20 hover:bg-slate-800 transition-all hover:scale-105 active:scale-95">
+          <a
+            href="https://app.glammateai.com/"
+            className="bg-primary text-white text-xs font-black uppercase tracking-widest px-6 py-3 rounded-xl shadow-lg shadow-primary/20 hover:bg-slate-800 transition-all hover:scale-105 active:scale-95 flex items-center justify-center whitespace-nowrap"
+          >
             Get Started Free
-          </button>
+          </a>
           <button className="md:hidden p-2 text-primary dark:text-white">
             <Menu className="w-6 h-6" />
           </button>
