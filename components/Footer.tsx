@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Globe, Instagram, Twitter, Linkedin, Facebook } from 'lucide-react';
 import { Logo } from './Navbar';
@@ -32,7 +31,7 @@ export const Footer: React.FC = () => {
 
         {/* Footer Links */}
         <div className="grid md:grid-cols-4 gap-12 mb-16 border-b border-slate-200 dark:border-slate-800 pb-16">
-          <div className="col-span-1 md:col-span-1">
+          <div className="col-span-1 md:col-span-2">
             <div className="mb-6 cursor-pointer">
               <Logo className="scale-75 origin-left" />
             </div>
@@ -49,16 +48,18 @@ export const Footer: React.FC = () => {
           </div>
 
           {[
-            { title: 'Product', links: ['Features', 'Pricing', 'Integrations', 'Changelog'] },
-            { title: 'Resources', links: ['Blog', 'Help Center', 'Community', 'Contact'] },
-            { title: 'Legal', links: ['Privacy Policy', 'Terms of Service', 'Security', 'GDPR'] },
+            { title: 'Product', links: ['Features', 'How It Works', 'Integrations', 'Pricing'] },
+            { title: 'Legal', links: ['Privacy Policy', 'Terms of Service'] },
           ].map((col, idx) => (
             <div key={idx}>
               <h4 className="font-bold mb-6 text-primary dark:text-white">{col.title}</h4>
               <ul className="space-y-4">
                 {col.links.map((link, i) => (
                   <li key={i}>
-                    <a href="#" className="text-sm text-slate-500 dark:text-slate-400 hover:text-accent dark:hover:text-accent transition-colors">
+                    <a 
+                      href={`#${link.toLowerCase().replace(/\s+/g, '-')}`} 
+                      className="text-sm text-slate-500 dark:text-slate-400 hover:text-accent dark:hover:text-accent transition-colors"
+                    >
                       {link}
                     </a>
                   </li>

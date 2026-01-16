@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { XCircle, CheckCircle2, PhoneOff, Zap, Clock, TrendingUp, Sparkles, Minus, Plus, Star } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
@@ -148,7 +149,7 @@ export const VsSection: React.FC = () => {
                     </div>
                     <div>
                       <h4 className="text-sm font-black text-primary dark:text-white">Sarah Jenkins</h4>
-                      <p className="text-[10px] text-slate-400 font-bold tracking-tight">Owner, Glow Bar NYC</p>
+                      <p className="text-[10px] text-slate-400 font-bold tracking-tight">Owner, GlamMate Salon</p>
                     </div>
                   </div>
                   <p className="text-sm font-bold text-slate-500 dark:text-slate-300 leading-relaxed italic tracking-tight">

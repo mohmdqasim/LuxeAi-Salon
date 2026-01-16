@@ -1,13 +1,13 @@
 
 import React from 'react';
-import { Play, MoreHorizontal, Search, Bell, Settings } from 'lucide-react';
+import { Play, MoreHorizontal, Search, Bell, Settings, Sparkles } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
 import { LiveLineChart, MiniBarChart, LiveMetricCard } from './LiveCharts';
 import { Calendar, Users, DollarSign, TrendingUp } from 'lucide-react';
 
 export const DashboardPreview: React.FC = () => {
   return (
-    <section className="py-24 bg-slate-50 dark:bg-background-dark/20 overflow-hidden">
+    <section className="py-24 bg-slate-50 dark:bg-background-dark/20 overflow-hidden" id="dashboard">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal animation="fade-in-up" className="text-center mb-16 max-w-2xl mx-auto">
           <h2 className="text-4xl font-black mb-4">Real-time Intelligence at your Fingertips</h2>
@@ -123,18 +123,22 @@ export const DashboardPreview: React.FC = () => {
                 </div>
 
                 <div className="space-y-6">
-                  <div className="p-6 bg-primary dark:bg-blue-600 rounded-2xl text-white shadow-xl shadow-primary/20">
-                    <h4 className="font-bold mb-1">System Health</h4>
-                    <p className="text-white/70 text-xs mb-4">GlamBot AI is performing at optimal efficiency.</p>
+                  {/* Replaced System Health with AI Autonomy / Performance */}
+                  <div className="p-6 bg-primary dark:bg-slate-900 rounded-2xl text-white shadow-xl shadow-primary/20 border border-white/5 relative overflow-hidden group">
+                    <div className="absolute top-0 right-0 p-4 opacity-20">
+                      <Sparkles className="w-12 h-12" />
+                    </div>
+                    <h4 className="font-bold mb-1">AI Autonomy</h4>
+                    <p className="text-white/70 text-xs mb-4">GlamMate AI is managing 98% of your front desk operations autonomously.</p>
                     <div className="flex items-center justify-center py-4">
                       <div className="relative">
                         <svg className="w-24 h-24 transform -rotate-90">
                           <circle cx="48" cy="48" r="40" stroke="currentColor" strokeWidth="8" fill="transparent" className="text-white/10" />
-                          <circle cx="48" cy="48" r="40" stroke="currentColor" strokeWidth="8" fill="transparent" strokeDasharray="251.2" strokeDashoffset="25.12" className="text-white transition-all duration-1000" />
+                          <circle cx="48" cy="48" r="40" stroke="currentColor" strokeWidth="8" fill="transparent" strokeDasharray="251.2" strokeDashoffset="5.02" className="text-accent transition-all duration-1000" />
                         </svg>
                         <div className="absolute inset-0 flex flex-col items-center justify-center">
-                          <span className="text-xl font-black">92%</span>
-                          <span className="text-[10px] font-bold uppercase opacity-60">Score</span>
+                          <span className="text-xl font-black">98%</span>
+                          <span className="text-[10px] font-bold uppercase opacity-60">Success</span>
                         </div>
                       </div>
                     </div>
