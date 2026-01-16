@@ -1,9 +1,8 @@
-
 import React from 'react';
 import { 
   Bot, MessageCircle, BellRing, Users, 
   RefreshCcw, ClipboardList, Megaphone, BarChart3,
-  Instagram, MessageSquare, Phone, Zap
+  Instagram, MessageSquare, Phone, Zap, Mail, Globe
 } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
 
@@ -11,7 +10,7 @@ const features = [
   { 
     icon: Bot, 
     title: 'AI Booking Concierge', 
-    desc: 'GlamBot handles complex scheduling logic, service combinations, and processing payments 24/7 without human intervention.',
+    desc: 'GlamBot handles complex scheduling logic, service combinations, and processing bookings 24/7 without human intervention.',
     className: 'md:col-span-8 md:row-span-1',
     badge: 'Most Powerful',
     color: 'from-accent to-primary'
@@ -19,13 +18,15 @@ const features = [
   { 
     icon: MessageCircle, 
     title: 'Unified Inbox', 
-    desc: 'One place for WhatsApp, Instagram DMs, and SMS.',
+    desc: 'One place for WhatsApp, Instagram DMs, Emails, Website Chatbot, and Facebook Messenger.',
     className: 'md:col-span-4 md:row-span-2',
     visual: (
-      <div className="flex gap-2 mt-4">
-        <div className="p-2 rounded-lg bg-accent/10 text-accent"><Instagram className="w-4 h-4" /></div>
-        <div className="p-2 rounded-lg bg-primary/10 text-primary"><MessageSquare className="w-4 h-4" /></div>
-        <div className="p-2 rounded-lg bg-accent/10 text-accent"><Phone className="w-4 h-4" /></div>
+      <div className="flex flex-wrap gap-2 mt-4">
+        <div className="p-2 rounded-lg bg-accent/10 text-accent" title="Instagram"><Instagram className="w-4 h-4" /></div>
+        <div className="p-2 rounded-lg bg-primary/10 text-primary" title="WhatsApp"><MessageCircle className="w-4 h-4" /></div>
+        <div className="p-2 rounded-lg bg-accent/10 text-accent" title="Email"><Mail className="w-4 h-4" /></div>
+        <div className="p-2 rounded-lg bg-primary/10 text-primary" title="Website"><Globe className="w-4 h-4" /></div>
+        <div className="p-2 rounded-lg bg-accent/10 text-accent" title="Facebook Messenger"><MessageSquare className="w-4 h-4" /></div>
       </div>
     )
   },
@@ -45,13 +46,13 @@ const features = [
   { 
     icon: Users, 
     title: 'Team Sync', 
-    desc: 'Automated commission splits and shift management for modern teams.',
+    desc: 'Smart staff scheduling and role-based access so your team stays organized, in sync, and focused on clients.',
     className: 'md:col-span-4 md:row-span-1'
   },
   { 
     icon: Megaphone, 
     title: 'Growth Engine', 
-    desc: 'Automated marketing campaigns that trigger based on client behavior.',
+    desc: 'Personalized messages, offers, and follow-ups sent automatically based on each client’s booking history and activity.',
     className: 'md:col-span-8 md:row-span-1',
     badge: 'New Feature'
   }
@@ -113,10 +114,6 @@ export const FeaturesGrid: React.FC = () => {
                   </p>
                   {f.visual}
                 </div>
-                
-                <div className="mt-8 flex items-center gap-2 text-xs font-bold text-accent opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 cursor-pointer">
-                  Explore feature <Zap className="w-3 h-3" />
-                </div>
               </div>
 
               {/* Decorative Corner Element */}
@@ -124,18 +121,6 @@ export const FeaturesGrid: React.FC = () => {
             </ScrollReveal>
           ))}
         </div>
-
-        <ScrollReveal animation="fade-in-up" delay={600} className="mt-20 flex flex-col items-center">
-          <div className="p-8 rounded-[3rem] bg-gradient-to-r from-primary to-slate-900 dark:from-primary/20 dark:to-slate-900/20 border border-white/10 w-full max-w-4xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
-            <div className="text-center md:text-left">
-              <h4 className="text-xl font-bold text-white mb-2">Want to see the full list of 40+ features?</h4>
-              <p className="text-white/60 text-sm">Download our detailed product comparison guide.</p>
-            </div>
-            <button className="bg-white text-primary px-8 py-4 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-accent hover:text-white transition-all whitespace-nowrap">
-              View All Features
-            </button>
-          </div>
-        </ScrollReveal>
       </div>
     </section>
   );
