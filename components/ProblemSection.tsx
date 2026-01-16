@@ -64,11 +64,6 @@ export const ProblemSection: React.FC = () => {
               </span>
             </h2>
           </ScrollReveal>
-          <ScrollReveal animation="fade-in-up" delay={200} className="lg:max-w-xs">
-            <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
-              Running a salon shouldn't mean being chained to a desk. Most owners lose 30% of their potential revenue to administrative inefficiencies.
-            </p>
-          </ScrollReveal>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
