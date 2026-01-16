@@ -12,6 +12,7 @@ import { IntelligenceSection } from './components/IntelligenceSection';
 import { DashboardPreview } from './components/DashboardPreview';
 import { UseCases } from './components/UseCases';
 import { Pricing } from './components/Pricing';
+import { EnterpriseSection } from './components/EnterpriseSection';
 import { Footer } from './components/Footer';
 
 const App: React.FC = () => {
@@ -42,6 +43,7 @@ const App: React.FC = () => {
         <DashboardPreview />
         <UseCases />
         <Pricing />
+        <EnterpriseSection />
       </main>
       <Footer />
     </div>

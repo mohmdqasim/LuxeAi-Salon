@@ -19,22 +19,25 @@ export const Hero: React.FC = () => {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.95] mb-8 tracking-tighter text-primary dark:text-white">
               The Operating System for <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary">
-                Modern Beauty Empires.
+                Modern Beauty Empires
               </span>
             </h1>
           </ScrollReveal>
 
           <ScrollReveal animation="fade-in-up" delay={400} className="max-w-2xl">
             <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-12 leading-relaxed font-medium">
-              Scale your salon with an AI assistant that masters your schedule, handles multi-channel bookings, and recovers lost revenue—while you focus on what you do best.
+              Scale your salon with an AI assistant that masters your schedule, handles multi-channel bookings, and recovers lost revenue while you focus on what you do best.
             </p>
           </ScrollReveal>
 
           <ScrollReveal animation="fade-in-up" delay={600}>
             <div className="flex flex-col sm:flex-row items-center gap-4">
-              <button className="w-full sm:w-auto bg-primary text-white text-sm font-black uppercase tracking-widest px-10 py-5 rounded-2xl shadow-2xl shadow-primary/30 hover:bg-slate-800 transition-all hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-2">
+              <a 
+                href="/signup" 
+                className="w-full sm:w-auto bg-primary text-white text-sm font-black uppercase tracking-widest px-10 py-5 rounded-2xl shadow-2xl shadow-primary/30 hover:bg-slate-800 transition-all hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-2"
+              >
                 Launch Your AI Salon <Zap className="w-4 h-4 fill-current text-accent" />
-              </button>
+              </a>
               <button className="w-full sm:w-auto bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-sm font-black uppercase tracking-widest px-10 py-5 rounded-2xl flex items-center justify-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all shadow-xl shadow-black/5 text-primary dark:text-white">
                 <PlayCircle className="w-5 h-5 text-accent" /> Watch Product Tour
               </button>
@@ -84,7 +87,7 @@ export const Hero: React.FC = () => {
                       <span className="text-xs font-black text-white/70 uppercase tracking-widest">No-Shows</span>
                     </div>
                     <div className="text-3xl font-black text-white mb-1">-85%</div>
-                    <div className="text-[10px] text-accent font-bold uppercase tracking-widest">With Auto-Deposits</div>
+                    <div className="text-[10px] text-accent font-bold uppercase tracking-widest">With Smart Reminders</div>
                   </div>
                 </div>
               </div>
