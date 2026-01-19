@@ -2,7 +2,11 @@ import React from 'react';
 import { Globe, Instagram, Twitter, Linkedin, Facebook } from 'lucide-react';
 import { Logo } from './Navbar';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onOpenLegal?: (type: string) => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
   return (
     <footer className="bg-background-light dark:bg-slate-950 pt-24 pb-12 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,12 +63,12 @@ export const Footer: React.FC = () => {
               <ul className="space-y-4">
                 {col.links.map((link, i) => (
                   <li key={i}>
-                    <a 
-                      href={`#${link.toLowerCase().replace(/\s+/g, '-')}`} 
-                      className="text-sm text-slate-500 dark:text-slate-400 hover:text-accent dark:hover:text-accent transition-colors"
+                    <button 
+                      onClick={() => onOpenLegal?.(link)}
+                      className="text-sm text-slate-500 dark:text-slate-400 hover:text-accent dark:hover:text-accent transition-colors text-left"
                     >
                       {link}
-                    </a>
+                    </button>
                   </li>
                 ))}
               </ul>

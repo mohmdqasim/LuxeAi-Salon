@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
@@ -13,9 +12,11 @@ import { DashboardPreview } from './components/DashboardPreview';
 import { UseCases } from './components/UseCases';
 import { Pricing } from './components/Pricing';
 import { Footer } from './components/Footer';
+import { LegalModal } from './components/LegalModal';
 
 const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
+  const [activeLegal, setActiveLegal] = useState<{ file: string; title: string } | null>(null);
 
   useEffect(() => {
     if (darkMode) {
@@ -26,6 +27,16 @@ const App: React.FC = () => {
   }, [darkMode]);
 
   const toggleTheme = () => setDarkMode(!darkMode);
+
+  const handleOpenLegal = (type: string) => {
+    if (type === 'Privacy Policy') {
+      setActiveLegal({ file: 'privacy_policy.md', title: 'Privacy Policy' });
+    } else if (type === 'Terms of Service') {
+      setActiveLegal({ file: 'terms_of_service.md', title: 'Terms of Service' });
+    } else if (type === 'Cookies Policy') {
+      setActiveLegal({ file: 'cookies_policy.md', title: 'Cookies Policy' });
+    }
+  };
 
   return (
     <div className="min-h-screen">
@@ -43,7 +54,14 @@ const App: React.FC = () => {
         <UseCases />
         <Pricing />
       </main>
-      <Footer />
+      <Footer onOpenLegal={handleOpenLegal} />
+
+      <LegalModal 
+        isOpen={activeLegal !== null}
+        onClose={() => setActiveLegal(null)}
+        fileName={activeLegal?.file || ''}
+        title={activeLegal?.title || ''}
+      />
     </div>
   );
 };

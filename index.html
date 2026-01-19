@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GlamMate AI</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -130,6 +129,32 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #A68A5D;
       }
+
+      /* Custom styles for tables within prose */
+      .prose table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .prose th {
+        background-color: rgba(188, 156, 107, 0.1);
+        padding: 0.75rem;
+        text-align: left;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-size: 0.75rem;
+        color: #BC9C6B;
+      }
+      .prose td {
+        padding: 0.75rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        font-size: 0.875rem;
+      }
+      .dark .prose td {
+        border-bottom-color: rgba(255, 255, 255, 0.05);
+      }
     </style>
     <script type="module">
       import { GoogleGenAI } from "https://esm.sh/@google/genai@^1.34.0";
@@ -143,6 +168,7 @@
     "react-dom": "https://esm.sh/react-dom@19.0.0",
     "react-dom/": "https://esm.sh/react-dom@19.0.0/",
     "lucide-react": "https://esm.sh/lucide-react@0.473.0",
+    "marked": "https://esm.sh/marked@15.0.0",
     "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
   }
 }
