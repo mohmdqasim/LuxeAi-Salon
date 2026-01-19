@@ -13,10 +13,11 @@ import { UseCases } from './components/UseCases';
 import { Pricing } from './components/Pricing';
 import { Footer } from './components/Footer';
 import { LegalModal } from './components/LegalModal';
+import * as LegalDocs from './legalDocs';
 
 const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
-  const [activeLegal, setActiveLegal] = useState<{ file: string; title: string } | null>(null);
+  const [activeLegal, setActiveLegal] = useState<{ content: string; title: string } | null>(null);
 
   useEffect(() => {
     if (darkMode) {
@@ -30,11 +31,11 @@ const App: React.FC = () => {
 
   const handleOpenLegal = (type: string) => {
     if (type === 'Privacy Policy') {
-      setActiveLegal({ file: 'privacy_policy.md', title: 'Privacy Policy' });
+      setActiveLegal({ content: LegalDocs.PRIVACY_POLICY, title: 'Privacy Policy' });
     } else if (type === 'Terms of Service') {
-      setActiveLegal({ file: 'terms_of_service.md', title: 'Terms of Service' });
+      setActiveLegal({ content: LegalDocs.TERMS_OF_SERVICE, title: 'Terms of Service' });
     } else if (type === 'Cookies Policy') {
-      setActiveLegal({ file: 'cookies_policy.md', title: 'Cookies Policy' });
+      setActiveLegal({ content: LegalDocs.COOKIES_POLICY, title: 'Cookies Policy' });
     }
   };
 
@@ -59,7 +60,7 @@ const App: React.FC = () => {
       <LegalModal 
         isOpen={activeLegal !== null}
         onClose={() => setActiveLegal(null)}
-        fileName={activeLegal?.file || ''}
+        content={activeLegal?.content || ''}
         title={activeLegal?.title || ''}
       />
     </div>
