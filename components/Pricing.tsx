@@ -157,7 +157,7 @@ export const Pricing: React.FC = () => {
 
         <ScrollReveal animation="fade-in-up" delay={600} className="mt-24 text-center">
           <p className="text-slate-600 dark:text-slate-400 text-sm font-medium">
-            Need something different? <a href="#" className="text-accent font-bold hover:underline">Chat with our sales team</a> for a custom volume package.
+            Let’s Talk. Need more power? <a href="https://app.glammateai.com/" className="text-accent font-bold hover:underline">Get in touch</a> for custom pricing, higher usage tiers, white-label solutions, and seamless integration with your existing systems. We’ll tailor GlamMate AI to match your brand and business goals.
           </p>
         </ScrollReveal>
       </div>
