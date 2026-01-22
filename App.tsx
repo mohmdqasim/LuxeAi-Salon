@@ -14,10 +14,14 @@ import { Pricing } from './components/Pricing';
 import { Footer } from './components/Footer';
 import { LegalModal } from './components/LegalModal';
 import * as LegalDocs from './legalDocs';
+import { ChatbotWidget } from './components/chatbot/ChatbotWidget';
 
 const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [activeLegal, setActiveLegal] = useState<{ content: string; title: string } | null>(null);
+  const businessId =
+    (import.meta.env.VITE_BUSINESS_ID as string | undefined) ||
+    'a54c3289-7423-4a48-9261-c2032bd24bb5';
 
   useEffect(() => {
     if (darkMode) {
@@ -57,12 +61,13 @@ const App: React.FC = () => {
       </main>
       <Footer onOpenLegal={handleOpenLegal} />
 
-      <LegalModal 
+      <LegalModal
         isOpen={activeLegal !== null}
         onClose={() => setActiveLegal(null)}
         content={activeLegal?.content || ''}
         title={activeLegal?.title || ''}
       />
+      <ChatbotWidget businessId={businessId} />
     </div>
   );
 };
