@@ -1,6 +1,6 @@
 import React from 'react';
 import { X } from 'lucide-react';
-import ladyImage from '../../assets/images/lady.png';
+import ladyImage from '../../assets/images/lady2.png';
 import { ChatMessage } from './chatbotTypes';
 import { ChatbotMessageList } from './ChatbotMessageList';
 import { ChatbotInput } from './ChatbotInput';

@@ -1,5 +1,5 @@
 import React from 'react';
-import sidebarLogoLight from '../../assets/logos/logo-small-light.svg';
+// import sidebarLogoLight from '../../assets/logos/logo-small-light.svg';
 import sidebarLogoDark from '../../assets/logos/logo-small-dark.svg';
 
 interface ChatbotToggleProps {
