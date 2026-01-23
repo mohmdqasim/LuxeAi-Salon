@@ -16,7 +16,7 @@ export const ChatbotToggle: React.FC<ChatbotToggleProps> = ({ isOpen, onToggle, 
       aria-label={isOpen ? 'Close chat' : 'Open chat'}
     >
       <img src={sidebarLogoDark} alt="LuxeAi" className="h-8 w-8 dark:hidden" />
-      <img src={sidebarLogoLight} alt="LuxeAi" className="hidden h-8 w-8 dark:block" />
+      <img src={sidebarLogoDark} alt="LuxeAi" className="hidden h-8 w-8 dark:block" />
       {unreadCount > 0 && (
         <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-accent text-[10px] font-black text-white shadow-md">
           {unreadCount > 9 ? '9+' : unreadCount}

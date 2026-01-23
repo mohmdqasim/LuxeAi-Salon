@@ -10,7 +10,7 @@ interface ChatbotInputProps {
 
 export const ChatbotInput: React.FC<ChatbotInputProps> = ({ value, onChange, onSend, isLoading }) => {
   return (
-    <div className="border-t border-slate-100 bg-slate-50 px-4 py-3 dark:border-white/10 dark:bg-slate-800/50">
+    <div className="border-t border-slate-100 bg-white px-4 py-3 dark:border-white/10 dark:bg-slate-900">
       <div className="relative">
         <input
           type="text"
@@ -21,8 +21,8 @@ export const ChatbotInput: React.FC<ChatbotInputProps> = ({ value, onChange, onS
               onSend();
             }
           }}
-          placeholder="Ask about bookings..."
-          className="w-full rounded-full bg-white py-3 pl-4 pr-12 text-sm text-primary shadow-sm outline-none ring-1 ring-transparent transition-all focus:ring-2 focus:ring-accent dark:bg-slate-900 dark:text-white"
+          placeholder="Type here..."
+          className="w-full rounded-full bg-slate-100 py-3 pl-4 pr-12 text-sm text-primary shadow-sm outline-none ring-1 ring-transparent transition-all focus:ring-2 focus:ring-accent dark:bg-slate-800 dark:text-white"
           disabled={isLoading}
         />
         <button
