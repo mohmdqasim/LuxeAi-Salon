@@ -40,7 +40,7 @@ export const ChatbotWindow: React.FC<ChatbotWindowProps> = ({
           </div>
           <div>
             <h4 className="text-sm font-black tracking-tight leading-none">Glami AI</h4>
-            <span className="text-[9px] font-bold uppercase tracking-widest opacity-60">We reply immediately</span>
+            <span className="text-[9px] font-bold uppercase tracking-widest opacity-60">Always Active</span>
           </div>
         </div>
         <button
