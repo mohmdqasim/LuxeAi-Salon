@@ -20,7 +20,7 @@ export const sendChatMessage = async ({
   sessionId,
 }: SendChatMessageParams): Promise<ChatResponse> => {
   const baseUrl = getApiBaseUrl();
-  const url = baseUrl ? `${baseUrl}/graph/chat/` : '/graph/chat/';
+  const url = baseUrl ? `${baseUrl}/api/tool-chat/` : '/api/tool-chat/';
 
   const response = await fetch(url, {
     method: 'POST',
