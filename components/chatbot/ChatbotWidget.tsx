@@ -107,6 +107,7 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({ businessId = '' })
           text: response?.response || "I'm sorry, I couldn't process that.",
           isBot: true,
           timestamp: new Date(),
+          chips: response?.chips || [],
         };
         setMessages((prev) => [...prev, botMessage]);
       } catch (_error) {
