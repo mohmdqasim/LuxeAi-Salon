@@ -21,7 +21,7 @@ const App: React.FC = () => {
   const [activeLegal, setActiveLegal] = useState<{ content: string; title: string } | null>(null);
   const businessId =
     (import.meta.env.VITE_BUSINESS_ID as string | undefined) ||
-    'ef5347c8-6e7c-4393-a700-b260f657f192';
+    'f7735113-3837-475c-a411-8377d099c6ef';
 
   useEffect(() => {
     if (darkMode) {
