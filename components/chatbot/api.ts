@@ -6,7 +6,7 @@ interface SendChatMessageParams {
   sessionId?: string | null;
 }
 
-const DEFAULT_API_BASE_URL = 'http://localhost:8000'; 
+const DEFAULT_API_BASE_URL = 'https://nonatheistic-idell-unabsorbed.ngrok-free.dev'; 
 
 const getApiBaseUrl = () => {
   const rawBaseUrl = import.meta.env?.VITE_API_BASE_URL as string | undefined;
