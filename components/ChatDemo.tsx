@@ -12,6 +12,36 @@ interface Message {
   timestamp: Date;
 }
 
+// Simple inline markdown renderer to support **bold** text in demo chat
+const renderInlineMarkdown = (text: string): React.ReactNode => {
+  const parts: React.ReactNode[] = [];
+  let lastIndex = 0;
+
+  const boldRegex = /\*\*([^*]+)\*\*/g;
+  let match: RegExpExecArray | null;
+
+  while ((match = boldRegex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index));
+    }
+    parts.push(
+      <strong
+        key={`bold-${match.index}`}
+        className="font-bold text-primary dark:text-white"
+      >
+        {match[1]}
+      </strong>
+    );
+    lastIndex = match.index + match[0].length;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex));
+  }
+
+  return parts.length > 0 ? <>{parts}</> : text;
+};
+
 export const ChatDemo: React.FC = () => {
   const [activeChannel, setActiveChannel] = useState<Channel>('instagram');
   const [messages, setMessages] = useState<Message[]>([
@@ -83,7 +113,9 @@ export const ChatDemo: React.FC = () => {
               ? 'bg-primary text-white rounded-2xl rounded-tr-none shadow-md shadow-primary/10' 
               : 'bg-white dark:bg-slate-800 text-primary dark:text-white rounded-2xl rounded-tl-none shadow-sm border border-slate-100 dark:border-slate-700'
           }`}>
-            {msg.text}
+            <span className="whitespace-pre-wrap">
+              {renderInlineMarkdown(msg.text)}
+            </span>
           </div>
           <div className="flex items-center gap-1 mt-1 px-1">
             <span className="text-[8px] opacity-40 font-bold uppercase text-charcoal dark:text-slate-400">
