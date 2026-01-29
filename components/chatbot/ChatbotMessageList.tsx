@@ -240,10 +240,19 @@ export const ChatbotMessageList: React.FC<ChatbotMessageListProps> = ({
           </div>
         ))}
         {isLoading && (
-          <div className="flex items-center gap-2 rounded-2xl rounded-tl-none border border-slate-100 bg-white px-3 py-2 dark:border-slate-700 dark:bg-slate-800">
-            <div className="h-1.5 w-1.5 animate-bounce rounded-full bg-accent" />
-            <div className="h-1.5 w-1.5 animate-bounce rounded-full bg-accent [animation-delay:0.2s]" />
-            <div className="h-1.5 w-1.5 animate-bounce rounded-full bg-accent [animation-delay:0.4s]" />
+          <div className="inline-flex max-w-[70%] items-center gap-3 rounded-2xl rounded-tl-none border border-slate-100 bg-slate-50 px-3 py-2 text-[11px] text-slate-600 shadow-sm dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200">
+            <span className="relative flex h-6 w-6 items-center justify-center">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent/25" />
+              <span className="relative inline-flex h-5 w-5 rounded-full bg-accent/90" />
+            </span>
+            <span className="flex items-center gap-2">
+              <span>Thinking</span>
+              <span className="flex items-center gap-[3px]">
+                <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-accent" />
+                <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-accent [animation-delay:0.18s]" />
+                <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-accent [animation-delay:0.32s]" />
+              </span>
+            </span>
           </div>
         )}
       </div>
