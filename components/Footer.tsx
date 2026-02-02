@@ -54,26 +54,41 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
             </div>
           </div>
 
-          {[
-            { title: 'Product', links: ['Features', 'How It Works', 'Integrations', 'Pricing'] },
-            { title: 'Legal', links: ['Privacy Policy', 'Terms of Service', 'Cookies Policy'] },
-          ].map((col, idx) => (
-            <div key={idx}>
-              <h4 className="font-bold mb-6 text-primary dark:text-white">{col.title}</h4>
-              <ul className="space-y-4">
-                {col.links.map((link, i) => (
-                  <li key={i}>
-                    <button 
-                      onClick={() => onOpenLegal?.(link)}
-                      className="text-sm text-slate-500 dark:text-slate-400 hover:text-accent dark:hover:text-accent transition-colors text-left"
-                    >
-                      {link}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div>
+            <h4 className="font-bold mb-6 text-primary dark:text-white">Product</h4>
+            <ul className="space-y-4">
+              {[
+                { label: 'Features', href: '#features' },
+                { label: 'How It Works', href: '#how-it-works' },
+                { label: 'Integrations', href: '#integrations' },
+                { label: 'Pricing', href: '#pricing' },
+              ].map((item, i) => (
+                <li key={i}>
+                  <a
+                    href={item.href}
+                    className="text-sm text-slate-500 dark:text-slate-400 hover:text-accent dark:hover:text-accent transition-colors text-left block"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-bold mb-6 text-primary dark:text-white">Legal</h4>
+            <ul className="space-y-4">
+              {['Privacy Policy', 'Terms of Service', 'Cookies Policy'].map((link, i) => (
+                <li key={i}>
+                  <button
+                    onClick={() => onOpenLegal?.(link)}
+                    className="text-sm text-slate-500 dark:text-slate-400 hover:text-accent dark:hover:text-accent transition-colors text-left"
+                  >
+                    {link}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">

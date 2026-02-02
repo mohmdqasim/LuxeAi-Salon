@@ -10,6 +10,7 @@ import { ChatDemo } from './components/ChatDemo';
 import { IntelligenceSection } from './components/IntelligenceSection';
 import { DashboardPreview } from './components/DashboardPreview';
 import { UseCases } from './components/UseCases';
+import { Integrations } from './components/Integrations';
 import { Pricing } from './components/Pricing';
 import { Footer } from './components/Footer';
 import { LegalModal } from './components/LegalModal';
@@ -57,6 +58,7 @@ const App: React.FC = () => {
         <ChatDemo />
         <DashboardPreview />
         <UseCases />
+        <Integrations />
         <Pricing />
       </main>
       <Footer onOpenLegal={handleOpenLegal} />
