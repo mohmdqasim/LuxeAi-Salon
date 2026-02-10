@@ -7,6 +7,7 @@ interface SendChatMessageParams {
 }
 
 const DEFAULT_API_BASE_URL = 'https://salon-saas-backend.vercel.app'; 
+// const DEFAULT_API_BASE_URL = 'http://127.0.0.1:8000';
 
 const getApiBaseUrl = () => {
   const rawBaseUrl = import.meta.env?.VITE_API_BASE_URL as string | undefined;
